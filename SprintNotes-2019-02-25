@@ -1,0 +1,19 @@
+Monday, Feb 25.  Some notes on discussions we had today.
+
+The main points we are working on are:
+
+Exercising MOSDEX in various ways.
+• Stefan has started to code up GAMS->MOSDEX, for example.
+• More of these sorts of translation activities will help us understand more about how the core concepts will behave in familiar environments.
+• We also spoke about extending sources of data, for example, to streams
+• We also spoke about using a base class for both variables and constraints (both are indexed data, for example)
+• We also spoke about using a concept of "sets" as primary entities.
+
+Thinking about composition and extensions.  We discussed the idea of "containers" as being a basic building block
+• A single container might be a MOSDEX model that when coupled with data would be sufficient to send to a solver.
+• But in a time-indexed problem, each time step can be thought of as a separate "container", where each pair of adjacent containers is linked by coupling constraints, like inventory balance.
+• In which case, the solver might like to know that there is structure
+
+Finally we spent some time discussing OSI.
+• If MOSDEX can express attributes of matrices, constraints or variables, then perhaps solvers could be selected based on these attributes.
+• And vice-versa: if solvers can handle certain attributes then perhaps they can advertise them in some form of description language (edited) 
